@@ -1,0 +1,50 @@
+#!/bin/bash
+
+clear
+echo -e "\e[1m\e[38;5;161m"
+echo '
+               _______________                        |*\_/*|________
+              |  ___________  |     .-.     .-.      ||_/-\_|______  |
+              | |           | |    .****. .****.     | |           | |
+              | |   0   0   | |    .*****.*****.     | |   0   0   | |
+              | |     -     | |     .*********.      | |     -     | |
+              | |   \___/   | |      .*******.       | |   \___/   | |
+              | |___     ___| |       .*****.        | |___________| |
+              |_____|\_/|_____|        .***.         |_______________|
+                _|__|/ \|_|_.............*.............._|________|_
+               / ********** \                          / ********** \
+             /  ************  \                      /  ************  \
+            --------------------                    --------------------
+                                  🄸🄼🄰🄶🅁🅈🄿🅃
+
+'
+echo -e "NeroEx32                                                         Sept 04, 2021\e[0m"
+echo -e "\e[1m\e[93m------------------------------------------------------------------------------\e[0m"
+echo -e " \e[1m\e[38;5;36m
+                 [1] Encryptografar         [2] Descryptografar
+                 [3] Documentação           [crtl + c] Exit
+      \e[0m"
+echo -e "\e[1m\e[93m------------------------------------------------------------------------------"
+read -p "[Option]: " OPtion
+echo -e "\e[0m"
+sleep 0.5
+if (($OPtion == 1)); then
+    echo -e "\e[1m\e[5m\e[38;5;63m<<Encryptografar>>\e[0m"
+    sudo bash /opt/IMAGRYPT/ecrypt.sh
+
+elif (($OPtion == 2)); then
+    echo -e "\e[1m\e[5m\e[38;5;63m<<Descryptografar>>\e[0m"
+    sudo bash /opt/IMAGRYPT/dcrypt.sh
+
+elif (($OPtion == 3)); then
+    echo -e "\e[1m\e[5m\e[38;5;63m<<Documentação>>\e[0m"
+    sudo less /opt/IMAGRYPT/readme.txt
+
+else
+	echo -e "\e[1m\e[38;5;202m[INVALID OPTION]\e[0m"
+        echo
+
+fi
+bash imagrypt
+
+
